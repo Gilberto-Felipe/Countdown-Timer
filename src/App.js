@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
-    const difference = +new Date(`${year}-10-1`) - +new Date();
+    const difference = +new Date(`${year}-12-25`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -42,10 +42,10 @@ function App() {
     );
   });
   return (
-    <div>
-      <h1>HacktoberFest {year} Countdown</h1>
+    <div className="container">
+      <h1 className="">Chistmas Day {year} Countdown</h1>
       <h2>With React Hooks!</h2>
-      {timerComponents.length ? timerComponents : <span>Time's up!</span>}
+      <h2>{timerComponents.length ? timerComponents : <span>00:00:00</span>}</h2>
     </div>
   );
 }
